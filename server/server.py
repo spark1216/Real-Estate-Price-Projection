@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import util
 app=Flask(__name__)
-@app.route('http://127.0.0.1:5000/get_estimated_price',methods=['POST'])
+@app.route('/get_estimated_price',methods=['POST'])
 def get_estimated_price():
     bed=int(request.form['bed'])
     bath=int(request.form['bath'])
